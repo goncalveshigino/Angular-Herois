@@ -6,6 +6,11 @@ import { HeroiComponent } from './pages/heroi/heroi.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListarComponent } from './pages/listar/listar.component';
 import { HeroisRoutingModule } from './herois-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material/material.module';
+
+
+
 
 
 
@@ -16,10 +21,13 @@ import { HeroisRoutingModule } from './herois-routing.module';
     HeroiComponent,
     HomeComponent,
     ListarComponent
+ 
   ],
   imports: [
     CommonModule,
-    HeroisRoutingModule
+    HeroisRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class HeroisModule { }
