@@ -9,6 +9,7 @@ import { HeroisRoutingModule } from './herois-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
 import { HeroiTarjetaComponent } from './components/heroi-tarjeta/heroi-tarjeta.component';
+import { ImagePipe } from './pipe/image.pipe';
 
 
 
@@ -22,7 +23,8 @@ import { HeroiTarjetaComponent } from './components/heroi-tarjeta/heroi-tarjeta.
     HeroiComponent,
     HomeComponent,
     ListarComponent,
-    HeroiTarjetaComponent
+    HeroiTarjetaComponent,
+    ImagePipe
  
   ],
   imports: [

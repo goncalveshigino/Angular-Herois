@@ -8,7 +8,8 @@
         <mat-card-subtitle>{{ heroi.alter_ego}}</mat-card-subtitle>
     </mat-card-header>
 
-  
+    <!-- <img mat-card-image src="assets/heroes/{{ heroi.id }}.jpg">  -->
+       <img mat-card-image [src]=" heroi | image "> 
 
     <mat-card-content>
         <h3>{{ heroi.publisher }}</h3>
