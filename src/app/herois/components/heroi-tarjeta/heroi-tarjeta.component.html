@@ -1,0 +1,35 @@
+
+
+
+<mat-card>
+
+    <mat-card-header>
+        <mat-card-title>{{ heroi.superhero }}</mat-card-title>
+        <mat-card-subtitle>{{ heroi.alter_ego}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image src="assets/heroes/{{ heroi.id }}.jpg" > 
+
+    <mat-card-content>
+        <h3>{{ heroi.publisher }}</h3>
+        <p>
+
+        <strong>Primeira aparência</strong>{{ heroi.first_appearance }}
+        <strong>personagens</strong>{{ heroi.characters }}
+
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+
+        <button mat-button color="warn">
+            Ler mais..
+        </button>
+
+        <button mat-button color="info">
+            Editar
+        </button>
+
+    </mat-card-actions>
+
+</mat-card>

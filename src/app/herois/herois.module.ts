@@ -8,6 +8,7 @@ import { ListarComponent } from './pages/listar/listar.component';
 import { HeroisRoutingModule } from './herois-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
+import { HeroiTarjetaComponent } from './components/heroi-tarjeta/heroi-tarjeta.component';
 
 
 
@@ -20,7 +21,8 @@ import { MaterialModule } from '../material/material.module';
     BuscarComponent,
     HeroiComponent,
     HomeComponent,
-    ListarComponent
+    ListarComponent,
+    HeroiTarjetaComponent
  
   ],
   imports: [

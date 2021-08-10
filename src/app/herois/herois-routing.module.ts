@@ -13,6 +13,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+        {
+        path: 'listar',
+        component: ListarComponent
+      },
       {
         path: 'agregar',
         component: AgregarComponent
@@ -28,10 +32,6 @@ const routes: Routes = [
       {
         path: ':id',
         component: HeroiComponent
-      },
-      {
-        path: 'listar',
-        component: ListarComponent
       },
       {
         path: '**',

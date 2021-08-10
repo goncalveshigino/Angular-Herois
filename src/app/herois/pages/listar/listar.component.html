@@ -1,2 +1,26 @@
-<p>ididiudidudu works!</p>
+
+<h1> Lista de Heróis </h1>
+<mat-divider></mat-divider>
+<br>
+
+
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px">
+
+    <div fxFlex="20"
+         fxFlex.lg="15"
+         fxFlex.sm="30"
+         *ngFor="let heroi of herois">
+
+          <!-- Reutizando componente -->
+         <app-heroi-tarjeta [heroi]="heroi"></app-heroi-tarjeta>
+
+    </div>
+
+</div>
+
+
 
