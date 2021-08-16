@@ -5,11 +5,6 @@ import { HeroisService } from '../../services/herois.service';
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
-  styles: [`
-    mat-card {
-      margin-top: 20px
-    }
-  `]
 })
 export class ListarComponent implements OnInit {
 

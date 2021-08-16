@@ -1,1 +1,50 @@
-<p>heroi works!</p>
+
+
+
+<mat-grid-list cols="1" *ngIf="!heroi; else divHeroi">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroi>
+
+ <div fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutGap="30px">
+      
+      <div fxFlex="50">
+           <h1>{{ heroi.superhero }} <small> - {{ heroi.alter_ego }}</small></h1> 
+           <mat-divider></mat-divider>
+           <br> 
+
+           <img [src]=" heroi | image ">
+
+      </div>
+
+
+      <div fxFlex="50"
+           fxFlex>
+          <h1>{{ heroi.publisher }}</h1>
+          <mat-divider></mat-divider>
+
+          <mat-list>
+               <mat-list-item> {{ heroi.first_appearance }}</mat-list-item>
+               <mat-list-item> {{ heroi.characters }}</mat-list-item>
+               <mat-list-item> {{ heroi.publisher }}</mat-list-item>
+               <mat-list-item> {{ heroi.alter_ego }}</mat-list-item>
+          </mat-list>
+
+          <br>
+          <button mat-button
+                  color="warn"
+                  (click)="regressar()">
+               Regressar
+          </button>
+
+      </div>
+
+ </div>
+
+</ng-template>
+  

@@ -6,6 +6,12 @@ import { Heroi } from '../../interfaces/heroi.interface';
   selector: 'app-heroi-tarjeta',
   templateUrl: './heroi-tarjeta.component.html',
   styles: [
+    `
+     mat-card {
+      margin-top: 20px
+    }
+    
+  `
   ]
 })
 export class HeroiTarjetaComponent  {
