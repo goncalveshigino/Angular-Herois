@@ -1,0 +1,17 @@
+
+<h1>Tem certeza ?</h1>
+<hr>
+
+
+<p>
+    Está pronto para eliminar <strong>{{ data.superhero }}</strong>
+    <br>
+    Deseja continuar?
+</p>
+
+<div>
+
+ <button mat-button color="warn" (click)="eliminar()">Sim, eliminar </button>
+ <button mat-button  (click)="cancelar()">Cancelar</button>
+
+</div>

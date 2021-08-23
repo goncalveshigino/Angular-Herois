@@ -48,14 +48,6 @@
       "characters": "Oliver Queen"
     },
     {
-      "id": "dc-wonder",
-      "superhero": "Wonder Woman",
-      "publisher": "DC Comics",
-      "alter_ego": "Princess Diana",
-      "first_appearance": "All Star Comics #8",
-      "characters": "Princess Diana"
-    },
-    {
       "id": "dc-martian",
       "superhero": "Martian Manhunter",
       "publisher": "DC Comics",
@@ -167,6 +159,5 @@
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
     }
- 
   ]
 }

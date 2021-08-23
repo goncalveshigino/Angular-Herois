@@ -1,7 +1,10 @@
 
 
 
-<h1>Novo Heroi <small>asd</small></h1>
+<h1> 
+     {{ (heroi.id) ? 'Editar': 'Novo'}} 
+     Heroi 
+    <small>{{ heroi.superhero }}</small></h1>
 
 
 <div fxLayout="row" 
@@ -79,12 +82,26 @@
 
     <br>
 
-    <button mat-raised-button 
-            color="primary"
-            (click)="salvar()">
-        <mat-icon>edit</mat-icon>
-        Salvar
-    </button>
+    <div fxLayout>
+
+        <button mat-raised-button 
+                color="primary"
+                (click)="salvar()">
+            <mat-icon>edit</mat-icon>
+            {{ (heroi.id) ? 'Atualizar': 'Inserir'}} 
+        </button>
+
+        <span class="spacer"></span>
+
+        <button *ngIf="heroi.id"
+                mat-raised-button
+                color="warn"
+                (click)="remove()">
+           <mat-icon>remove</mat-icon>
+           Eliminar
+        </button>
+
+    </div>
 
 </div>
 

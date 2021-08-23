@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
 import { HeroiTarjetaComponent } from './components/heroi-tarjeta/heroi-tarjeta.component';
 import { ImagePipe } from './pipe/image.pipe';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 
@@ -27,7 +28,8 @@ import { ImagePipe } from './pipe/image.pipe';
     HomeComponent,
     ListarComponent,
     HeroiTarjetaComponent,
-    ImagePipe
+    ImagePipe,
+    ConfirmarComponent
  
   ],
   imports: [
