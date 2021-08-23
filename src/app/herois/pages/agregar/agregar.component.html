@@ -19,7 +19,7 @@
             <mat-label>Super Heroi</mat-label>
             <input matInput 
                    type="text" 
-                   ([ngModel])="heroi.superhero"
+                   [(ngModel)]="heroi.superhero"
                    required>
         </mat-form-field>
         
@@ -28,7 +28,7 @@
             <mat-label>Alter Ego</mat-label>
             <input matInput 
                    type="text"
-                   ([ngModel])="heroi.alter_ego"
+                   [(ngModel)]="heroi.alter_ego"
                    required>
         </mat-form-field>
 
@@ -40,7 +40,7 @@
         <mat-label> Primeira Aparicion</mat-label>
         <input matInput 
                type="text" 
-               ([ngModel])="heroi.first_appearance"
+               [(ngModel)]="heroi.first_appearance"
                required>
     </mat-form-field>
 
@@ -50,7 +50,7 @@
         <mat-label>Personagens</mat-label>
         <input matInput 
                type="text" 
-               ([ngModel])="heroi.characters"
+               [(ngModel)]="heroi.characters"
                required>
     </mat-form-field>
 
@@ -59,7 +59,7 @@
     
         <mat-label>Criador</mat-label>
         <mat-select required 
-                    ([ngModel])="heroi.publisher">
+                    [(ngModel)]="heroi.publisher">
           <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
               {{ publisher.desc }}
           </mat-option>
@@ -73,13 +73,15 @@
         <mat-label>Foto Url</mat-label>
         <input matInput 
                type="text" 
-               ([ngModel])="heroi.alt_img"
+               [(ngModel)]="heroi.alt_img"
                required>
     </mat-form-field>
 
     <br>
 
-    <button mat-raised-button color="primary">
+    <button mat-raised-button 
+            color="primary"
+            (click)="salvar()">
         <mat-icon>edit</mat-icon>
         Salvar
     </button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Heroi, Publisher } from '../../interfaces/heroi.interface';
+import { HeroisService } from '../../services/herois.service';
 
 @Component({
   selector: 'app-agregar',
@@ -9,29 +10,42 @@ import { Heroi, Publisher } from '../../interfaces/heroi.interface';
 })
 export class AgregarComponent implements OnInit {
 
-  publishers = [
+ publishers = [
     {
-      id  : 'DC Comics',
+      id: 'DC Comics',
       desc: 'DC - Comics'
     },
-     {
-      id  : 'Marvel Comics',
+    {
+      id: 'Marvel Comics',
       desc: 'Marvel - Comics'
-    }
-  ]
+    },
+  ];
 
   heroi: Heroi = {
     superhero: '',
     alter_ego: '',
     characters: '',
     first_appearance: '',
-    publisher: Publisher.MarvelComics,
+    publisher: Publisher.DCComics,
     alt_img: '',
   }
 
-  constructor() { }
+  constructor( private heroisService: HeroisService   ) { }
 
   ngOnInit(): void {
+  }
+
+  salvar() {
+    
+    if (this.heroi.superhero.trim().length === 0) {
+      return;
+    }
+
+    this.heroisService.addHeroi( this.heroi )
+      .subscribe(resp => {
+        console.log('Respostas', resp);
+      })
+
   }
 
 }
