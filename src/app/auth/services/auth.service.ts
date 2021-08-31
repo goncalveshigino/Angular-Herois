@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+
+import { tap } from 'rxjs/operators';
 import { Auth } from '../interfaces/auth.interface';
 
 @Injectable({
@@ -13,8 +14,8 @@ export class AuthService {
 
   private _auth: Auth | undefined;
 
-  get auth() {
-    return {...this._auth }
+  get auth(): Auth {
+    return {...this._auth! }
   }
 
 
@@ -24,7 +25,7 @@ export class AuthService {
   login() {
     return this.http.get<Auth>(`${this.baseURL}/users/1`)
       .pipe(
-        tap(auth => this._auth = auth )
+        tap(auth => this._auth = auth)
       )
   }
 

@@ -20,6 +20,8 @@ export class LoginComponent  {
     //this.router.navigate(['./herois']);
     this.authService.login()
       .subscribe(resp => {
+
+        console.log(resp);
         
         if (resp.id) {
           

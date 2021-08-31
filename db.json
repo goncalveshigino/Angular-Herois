@@ -1,8 +1,8 @@
 {
-  "users": [
+  "usuarios": [
     {
       "id": 1,
-      "user": "Gonza",
+      "usuario": "Gonçalves Higino",
       "email": "gonza@gmail.com"
     }
   ],
