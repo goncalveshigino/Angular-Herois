@@ -1,9 +1,6 @@
 
-
 export interface Auth {
-
-    id      : string;
-    email   : string;
-    username: string;
-
+    id:      string;
+    email:   string;
+    usuario: string;
 }

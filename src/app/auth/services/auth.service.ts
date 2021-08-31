@@ -23,7 +23,7 @@ export class AuthService {
   
 
   login() {
-    return this.http.get<Auth>(`${this.baseURL}/users/1`)
+    return this.http.get<Auth>(`${this.baseURL}/usuarios/1`)
       .pipe(
         tap(auth => this._auth = auth)
       )
