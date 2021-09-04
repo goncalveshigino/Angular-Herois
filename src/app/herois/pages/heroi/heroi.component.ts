@@ -32,8 +32,7 @@ export class HeroiComponent implements OnInit {
     //Pegar por id
     this.activatedRoute.params
       .pipe(
-        switchMap( ({ id }) => this.heroisService.getHeroiPorID(id) ),
-        tap( console.log )
+        switchMap( ({ id }) => this.heroisService.getHeroiPorID(id) )
       )
        .subscribe( heroi =>  this.heroi = heroi );
   }
